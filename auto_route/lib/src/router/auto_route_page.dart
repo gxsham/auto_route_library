@@ -345,9 +345,9 @@ class AdaptivePage<T> extends _TitledAutoRoutePage<T> {
 
   @override
   Route<T> onCreateRoute(BuildContext context) {
-    if (kIsWeb) {
-      return _NoAnimationPageRouteBuilder<T>(page: this);
-    }
+    //if (kIsWeb) {
+    //  return _NoAnimationPageRouteBuilder<T>(page: this);
+    //}
     final platform = Theme.of(context).platform;
     if (platform == TargetPlatform.iOS || platform == TargetPlatform.macOS) {
       return _PageBasedCupertinoPageRoute<T>(page: this);
